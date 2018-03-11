@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSuaKhoa));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtMaCNBM = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenKhoa = new System.Windows.Forms.TextBox();
             this.txtMaKhoa = new System.Windows.Forms.TextBox();
             this.btnSuaKhoa = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtMaCNBM = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +66,26 @@
             this.groupBox1.Size = new System.Drawing.Size(391, 127);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Blue;
+            this.label4.Location = new System.Drawing.Point(7, 89);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(171, 17);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Mã Chủ Nhiệm Bộ Môn:";
+            // 
+            // txtMaCNBM
+            // 
+            this.txtMaCNBM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtMaCNBM.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaCNBM.Location = new System.Drawing.Point(181, 89);
+            this.txtMaCNBM.Name = "txtMaCNBM";
+            this.txtMaCNBM.Size = new System.Drawing.Size(204, 21);
+            this.txtMaCNBM.TabIndex = 6;
             // 
             // label3
             // 
@@ -137,26 +157,6 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(7, 89);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 17);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Mã Chủ Nhiệm Bộ Môn:";
-            // 
-            // txtMaCNBM
-            // 
-            this.txtMaCNBM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtMaCNBM.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaCNBM.Location = new System.Drawing.Point(181, 89);
-            this.txtMaCNBM.Name = "txtMaCNBM";
-            this.txtMaCNBM.Size = new System.Drawing.Size(204, 21);
-            this.txtMaCNBM.TabIndex = 6;
             // 
             // frmSuaKhoa
             // 
