@@ -45,8 +45,15 @@ namespace QuanLySinhVien
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "INSERT INTO LOP VALUES('" + txtMaLop.Text + "','" + txtTenLop.Text + "','"+txtMaLT.Text+ "','" + txtMaGVCN.Text + "')";
-            cmd.ExecuteNonQuery();
+                // cmd.CommandText = "INSERT INTO LOP VALUES('" + txtMaLop.Text + "','" + txtTenLop.Text + "','"+txtMaLT.Text+ "','" + txtMaGVCN.Text + "')";
+                cmd.CommandText = "InsertDataIntoLop";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("MaLop", txtMaLop.Text);
+                cmd.Parameters.AddWithValue("TenLop", txtTenLop.Text);
+                cmd.Parameters.AddWithValue("MaLopTruong", txtMaLT.Text);
+                cmd.Parameters.AddWithValue("MaGVCN", txtMaGVCN.Text);
+
+                cmd.ExecuteNonQuery();
             DialogResult result;
             result = MessageBox.Show("THÊM DỮ LIỆU THÀNH CÔNG", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             if (result == DialogResult.OK)

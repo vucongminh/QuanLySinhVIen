@@ -33,7 +33,12 @@ namespace QuanLySinhVien
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
-                cmd.CommandText = "INSERT INTO BOMON VALUES('" + txtMaKhoa.Text + "','" + txtTenKhoa.Text + "','" + txtMaCNBM.Text + "')";
+                //cmd.CommandText = "INSERT INTO BOMON VALUES('" + txtMaKhoa.Text + "','" + txtTenKhoa.Text + "','" + txtMaCNBM.Text + "')";
+                cmd.CommandText = "InsertDataIntoBoMon";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("MaBM", txtMaKhoa.Text);
+                cmd.Parameters.AddWithValue("TenBM", txtTenKhoa.Text);
+                cmd.Parameters.AddWithValue("MaChuNhiemBM", txtMaCNBM.Text);
                 cmd.ExecuteNonQuery();
                 DialogResult result;
                 result = MessageBox.Show("THÊM DỮ LIỆU THÀNH CÔNG", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
