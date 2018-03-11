@@ -26,27 +26,25 @@ namespace QuanLySinhVien
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "SELECT SinhVien_ID,TenSinhVien,GioiTinh,NgaySinh,NoiSinh,NoiOHienTai,KhoaHoc,LyLich,TenLop,HinhAnh,TenKhoa FROM SinhVien,Lop,Khoa WHERE Khoa_ID=ID_Khoa AND Lop_ID=ID_Lop and SinhVien_ID='" +SinhVien_ID + "'";
+            cmd.CommandText = "SELECT * FROM SinhVien WHERE  MaSV='" + SinhVien_ID + "'";
             SqlDataReader rd;
             rd = cmd.ExecuteReader();
             DataTable td = new DataTable();
             td.Load(rd);
             this.txtMaSinhVien.Text = td.Rows[0][0].ToString();
-            this.txtTenSinhVien.Text = td.Rows[0][1].ToString();
-            this.mskNgaySinh.Text=td.Rows[0][3].ToString();
-            this.txtNoiSinh.Text = td.Rows[0][4].ToString();
-            this.txtOHienTai.Text = td.Rows[0][5].ToString();
-            this.txtKhoaHoc.Text = td.Rows[0][6].ToString();
-            this.txtLyLich.Text = td.Rows[0][7].ToString();
-            this.txtLop.Text = td.Rows[0][8].ToString();
-            this.txtKhoa.Text = td.Rows[0][10].ToString();
+            this.txtHoTen.Text = td.Rows[0][1].ToString();
+            this.txtCMND.Text = td.Rows[0][2].ToString();
+            this.mskNgaySinh.Text = td.Rows[0][4].ToString();
+            this.txtQueQuan.Text = td.Rows[0][5].ToString();
+            this.txtSDT.Text = td.Rows[0][6].ToString();
+            this.txtTenLop.Text = td.Rows[0][7].ToString();
             string hinhanh;
-            hinhanh = td.Rows[0][9].ToString();
+            hinhanh = td.Rows[0][8].ToString();
             this.pictureBox1.Image = new Bitmap(Application.StartupPath + @"\hinhanh\" + hinhanh);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            
+
             int sex;
-            sex = Convert.ToInt16(td.Rows[0][2]);
+            sex = Convert.ToInt16(td.Rows[0][3]);
             if (sex == 0)
                 radioButton1.Checked = true;
             else
@@ -105,6 +103,11 @@ namespace QuanLySinhVien
         }
 
         private void txtMaSinhVien_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }
