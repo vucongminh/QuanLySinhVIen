@@ -25,25 +25,27 @@ namespace QuanLySinhVien
             //con.Open();
             //SqlCommand cmd = new SqlCommand();
             //cmd.Connection = con;
-            //cmd.CommandText = "SELECT * FROM Khoa";
+            //cmd.CommandText = "SELECT * FROM LOP";
             //SqlDataReader rd;
             //rd = cmd.ExecuteReader();
             //DataTable td = new DataTable();
             //td.Load(rd);
             //for (int i = 0; i < td.Rows.Count; i++)
             //{
-            //    this.cboKhoa.Items.Add(td.Rows[i][1]);
+            //    this.txtMaLop.Items.Add(td.Rows[i][1]);
             //}
         }
 
         private void btnThemLop_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection();
+            try
+            {
+                SqlConnection con = new SqlConnection();
             con.ConnectionString = KetNoi.str;
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "INSERT INTO LOP VALUES('" + txtMaLop.Text + "','" + txtTenLop.Text + "')";
+            cmd.CommandText = "INSERT INTO LOP VALUES('" + txtMaLop.Text + "','" + txtTenLop.Text + "','"+txtMaLT.Text+ "','" + txtMaGVCN.Text + "')";
             cmd.ExecuteNonQuery();
             DialogResult result;
             result = MessageBox.Show("THÊM DỮ LIỆU THÀNH CÔNG", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -52,6 +54,11 @@ namespace QuanLySinhVien
                 this.Close();
                 frmThemLop frm = new frmThemLop();
                 frm.Show();
+            }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Nhập Liệu Sai !", "Thông Báo");
             }
         }
 

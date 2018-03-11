@@ -62,22 +62,29 @@ namespace QuanLySinhVien
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = KetNoi.str;
-            con.Open();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "DELETE FROM LOP Where MaLop='" + MaLop + "'";
-            DialogResult result;
-            result = MessageBox.Show("BẠN CÓ MUỐN XÓA THÔNG TIN KHÔNG?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            try
             {
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("XÓA THÀNH CÔNG", "THÔNG BÁO");
-                this.Close();
-                frmDSLop frm = new frmDSLop();
-                frm.Show();
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = KetNoi.str;
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "DELETE FROM LOP Where MaLop='" + MaLop + "'";
+                DialogResult result;
+                result = MessageBox.Show("BẠN CÓ MUỐN XÓA THÔNG TIN KHÔNG?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("XÓA THÀNH CÔNG", "THÔNG BÁO");
+                    this.Close();
+                    frmDSLop frm = new frmDSLop();
+                    frm.Show();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Nhập Liệu Sai !", "Thông Báo");
             }
 
         }

@@ -37,7 +37,7 @@ namespace QuanLySinhVien
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "SELECT * FROM LOP ";
+            cmd.CommandText = "SELECT MaLop,TenLop,TenSV,TenGV FROM LOP ,SINHVIEN , GIAOVIEN  where LOP.MaLopTruong=SINHVIEN.MaSV and LOP.MaGVCN=GIAOVIEN.MaGV ";
             SqlDataReader rd;
             rd = cmd.ExecuteReader();
             DataTable td = new DataTable();
@@ -46,6 +46,8 @@ namespace QuanLySinhVien
             {
                 ListViewItem item = new ListViewItem(td.Rows[i][0].ToString());
                 item.SubItems.Add(td.Rows[i][1].ToString());
+                item.SubItems.Add(td.Rows[i][2].ToString());
+                item.SubItems.Add(td.Rows[i][3].ToString());
                 listView1.Items.Add(item);
 
             }
@@ -77,6 +79,7 @@ namespace QuanLySinhVien
         {
             this.Close();
             frmThemLop frm = new frmThemLop();
+            //frm.MdiParent = this.MdiParent;
             frm.Show();
         }
 
@@ -89,6 +92,7 @@ namespace QuanLySinhVien
                 str = this.listView1.Items[row].SubItems[0].Text;
                 this.Close();
                 frmSuaLop frm = new frmSuaLop(str);
+                //frm.MdiParent = this.MdiParent;
                 frm.Show();
             }
             catch (Exception )
@@ -107,7 +111,8 @@ namespace QuanLySinhVien
             str = this.listView1.Items[row].SubItems[0].Text;
             this.Close();
             frmXoaLop frm = new frmXoaLop(str);
-            frm.Show();
+                //frm.MdiParent = this.MdiParent;
+                frm.Show();
             }
             catch (Exception)
             {

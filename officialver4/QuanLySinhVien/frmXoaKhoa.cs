@@ -28,12 +28,12 @@ namespace QuanLySinhVien
 
         private void frmXoaKhoa_Load(object sender, EventArgs e)
         {
-             SqlConnection con = new SqlConnection();
+            SqlConnection con = new SqlConnection();
             con.ConnectionString = KetNoi.str;
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "SELECT TenKhoa FROM Khoa WHERE Khoa_ID='" +MaKhoa + "'";
+            cmd.CommandText = "SELECT TenBM FROM BOMON WHERE MaBM='" + MaKhoa + "'";
             SqlDataReader rd;
             rd = cmd.ExecuteReader();
             DataTable td = new DataTable();
@@ -45,24 +45,30 @@ namespace QuanLySinhVien
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            try { 
             SqlConnection con = new SqlConnection();
             con.ConnectionString = KetNoi.str;
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "DELETE FROM Khoa Where Khoa_ID='" +MaKhoa+ "'";
+            cmd.CommandText = "DELETE FROM BOMON Where MaBM='" + MaKhoa + "'";
             DialogResult result;
             result = MessageBox.Show("BẠN CÓ MUỐN XÓA THÔNG TIN KHÔNG?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 cmd.ExecuteNonQuery();
                 con.Close();
-                 MessageBox.Show("XÓA THÀNH CÔNG", "THÔNG BÁO");
-                 this.Close();
-                 frmKhoa frm = new frmKhoa();
-                 frm.Show();
+                MessageBox.Show("XÓA THÀNH CÔNG", "THÔNG BÁO");
+                this.Close();
+                frmKhoa frm = new frmKhoa();
+                frm.Show();
             }
-            
+            } 
+            catch (Exception)
+            {
+                MessageBox.Show("Nhập Liệu Sai !", "Thông Báo");
+            }
+
         }
     }
 }
