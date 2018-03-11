@@ -16,6 +16,7 @@ namespace QuanLySinhVien
         {
             InitializeComponent();
             quảnLýNgườiDùngToolStripMenuItem.Enabled = false;
+            
 
         }
 

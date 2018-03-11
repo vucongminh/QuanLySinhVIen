@@ -132,7 +132,7 @@
             this.sinhViênToolStripMenuItem.Enabled = false;
             this.sinhViênToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sinhViênToolStripMenuItem.Image")));
             this.sinhViênToolStripMenuItem.Name = "sinhViênToolStripMenuItem";
-            this.sinhViênToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sinhViênToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.sinhViênToolStripMenuItem.Text = "Sinh Viên";
             this.sinhViênToolStripMenuItem.Click += new System.EventHandler(this.sinhViênToolStripMenuItem_Click);
             // 
@@ -141,8 +141,8 @@
             this.khoaToolStripMenuItem.Enabled = false;
             this.khoaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("khoaToolStripMenuItem.Image")));
             this.khoaToolStripMenuItem.Name = "khoaToolStripMenuItem";
-            this.khoaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.khoaToolStripMenuItem.Text = "Khoa";
+            this.khoaToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.khoaToolStripMenuItem.Text = "Bộ Môn";
             this.khoaToolStripMenuItem.Click += new System.EventHandler(this.khoaToolStripMenuItem_Click);
             // 
             // lớpToolStripMenuItem
@@ -150,7 +150,7 @@
             this.lớpToolStripMenuItem.Enabled = false;
             this.lớpToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("lớpToolStripMenuItem.Image")));
             this.lớpToolStripMenuItem.Name = "lớpToolStripMenuItem";
-            this.lớpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lớpToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.lớpToolStripMenuItem.Text = "Lớp";
             this.lớpToolStripMenuItem.Click += new System.EventHandler(this.lớpToolStripMenuItem_Click);
             // 
@@ -159,7 +159,7 @@
             this.mônHọcToolStripMenuItem.Enabled = false;
             this.mônHọcToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("mônHọcToolStripMenuItem.Image")));
             this.mônHọcToolStripMenuItem.Name = "mônHọcToolStripMenuItem";
-            this.mônHọcToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.mônHọcToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.mônHọcToolStripMenuItem.Text = "Môn Học";
             this.mônHọcToolStripMenuItem.Click += new System.EventHandler(this.mônHọcToolStripMenuItem_Click);
             // 
@@ -218,13 +218,14 @@
             // notifyIcon1
             // 
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Text = "Chương Trình Quản Lý Sinh Viên";
             this.notifyIcon1.Visible = true;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
