@@ -12,11 +12,24 @@ namespace QuanLySinhVien
 {
     public partial class frmKetQuaHocTap : Form
     {
+        public static string username = string.Empty;
+        public static string pass = string.Empty;
         string SinhVien_ID;
         public frmKetQuaHocTap(string MaSinhVien)
         {
             SinhVien_ID = MaSinhVien;
             InitializeComponent();
+            DangNhapHeThong DangNhap = new DangNhapHeThong();
+            if (DangNhap.checkOnlyRead(username, pass) == true)
+            {
+                Color hic = Color.FromArgb(54, 54, 54);
+                btnThem.BackColor = hic;
+                btnThem.Enabled = false;
+                btnSua.BackColor = hic;
+                btnSua.Enabled = false;
+                btnXoa.BackColor = hic;
+                btnXoa.Enabled = false;
+            }
         }
 
         private void frmKetQuaHocTap_Load(object sender, EventArgs e)
@@ -26,7 +39,7 @@ namespace QuanLySinhVien
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "SELECT TenMonHoc,SoTrinh,LanThi,DiemThi,DiemTongKet FROM MonHoc,KetQua WHERE KetQua.ID_MonHoc=MonHoc.MonHoc_ID AND KetQua.ID_SinhVien='"+SinhVien_ID+"' ";
+            cmd.CommandText = "SELECT h.TenHP,h.SoTC,b.LanThi,DiemKT,DiemKTGiuaKy,DiemThi,DiemTongKet,GhiChu,s.TenSV,b.MaSV,s.MaLop FROM BANGDIEM as b,LOPHOCPHAN as l,HOCPHAN as h,SINHVIEN as s WHERE b.MaSV ='"+SinhVien_ID+"' and b.MaLHP=l.MaLHP and l.MaHP=h.MaHP and b.MaSV=s.MaSV";
             SqlDataReader rd;
             rd = cmd.ExecuteReader();
             DataTable td = new DataTable();
@@ -38,10 +51,17 @@ namespace QuanLySinhVien
                 item.SubItems.Add(td.Rows[i][2].ToString());
                 item.SubItems.Add(td.Rows[i][3].ToString());
                 item.SubItems.Add(td.Rows[i][4].ToString());
+                item.SubItems.Add(td.Rows[i][5].ToString());
+                item.SubItems.Add(td.Rows[i][6].ToString());
+                item.SubItems.Add(td.Rows[i][7].ToString());              
                 listView1.Items.Add(item);
+                labeTen.Text = td.Rows[i][8].ToString();
+                labelMaSV.Text=  td.Rows[i][9].ToString();
+                labelMaLop.Text = td.Rows[i][10].ToString();
             }
             con.Close();
             
+
 
         }
 
@@ -133,6 +153,16 @@ namespace QuanLySinhVien
             }
          
             
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labeTen_Click(object sender, EventArgs e)
+        {
 
         }
     }

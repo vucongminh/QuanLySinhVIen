@@ -42,6 +42,12 @@ namespace QuanLySinhVien
                 
                 frmDSLop.username = txtTenDangNhap.Text;
                 frmDSLop.pass = txtMatKhau.Text;
+
+                frmKetQuaHocTap.username = txtTenDangNhap.Text;
+                frmKetQuaHocTap.pass = txtMatKhau.Text;
+
+                frmChiTietSinhVien.username = txtTenDangNhap.Text;
+                frmChiTietSinhVien.pass = txtMatKhau.Text;
                 this.Close();
                 
             }

@@ -41,7 +41,7 @@ namespace QuanLySinhVien
 
         private void lớpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //frmLop_Khoa frm = new frmLop_Khoa();
+           
             frmDSLop frm = new frmDSLop();
             frm.MdiParent = this;
             frm.Show();

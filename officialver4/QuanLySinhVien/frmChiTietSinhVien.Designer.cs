@@ -99,18 +99,18 @@
             // 
             this.buttonKQ.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKQ.ForeColor = System.Drawing.Color.Blue;
-            this.buttonKQ.Location = new System.Drawing.Point(582, 138);
+            this.buttonKQ.Location = new System.Drawing.Point(582, 180);
             this.buttonKQ.Name = "buttonKQ";
-            this.buttonKQ.Size = new System.Drawing.Size(132, 35);
+            this.buttonKQ.Size = new System.Drawing.Size(182, 56);
             this.buttonKQ.TabIndex = 6;
-            this.buttonKQ.Text = "Kết Qủa Học Tập";
+            this.buttonKQ.Text = "Kết Quả Học Tập";
             this.buttonKQ.UseVisualStyleBackColor = true;
             this.buttonKQ.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(134, 136);
             this.pictureBox1.TabIndex = 4;
@@ -120,6 +120,7 @@
             // 
             this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Enabled = false;
             this.groupBox2.Location = new System.Drawing.Point(582, 58);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(182, 51);
@@ -130,6 +131,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.Enabled = false;
             this.radioButton2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.ForeColor = System.Drawing.Color.Blue;
             this.radioButton2.Location = new System.Drawing.Point(116, 19);
@@ -143,6 +145,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Enabled = false;
             this.radioButton1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.ForeColor = System.Drawing.Color.Blue;
             this.radioButton1.Location = new System.Drawing.Point(26, 19);
@@ -169,7 +172,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Blue;
-            this.label7.Location = new System.Drawing.Point(156, 208);
+            this.label7.Location = new System.Drawing.Point(162, 219);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 17);
             this.label7.TabIndex = 2;
@@ -180,18 +183,18 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Blue;
-            this.label6.Location = new System.Drawing.Point(156, 173);
+            this.label6.Location = new System.Drawing.Point(162, 180);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 17);
+            this.label6.Size = new System.Drawing.Size(105, 17);
             this.label6.TabIndex = 2;
-            this.label6.Text = "Số điện Thoại:";
+            this.label6.Text = "Số Điện Thoại:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(156, 138);
+            this.label5.Location = new System.Drawing.Point(162, 141);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 17);
             this.label5.TabIndex = 2;
@@ -202,7 +205,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(156, 98);
+            this.label4.Location = new System.Drawing.Point(162, 102);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 17);
             this.label4.TabIndex = 2;
@@ -213,7 +216,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(156, 61);
+            this.label3.Location = new System.Drawing.Point(162, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 17);
             this.label3.TabIndex = 2;
@@ -224,7 +227,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(156, 20);
+            this.label2.Location = new System.Drawing.Point(162, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 17);
             this.label2.TabIndex = 2;
@@ -232,7 +235,8 @@
             // 
             // mskNgaySinh
             // 
-            this.mskNgaySinh.Location = new System.Drawing.Point(275, 95);
+            this.mskNgaySinh.Enabled = false;
+            this.mskNgaySinh.Location = new System.Drawing.Point(281, 99);
             this.mskNgaySinh.Mask = "00/00/0000";
             this.mskNgaySinh.Name = "mskNgaySinh";
             this.mskNgaySinh.Size = new System.Drawing.Size(182, 20);
@@ -241,6 +245,7 @@
             // 
             // txtHoTen
             // 
+            this.txtHoTen.Enabled = false;
             this.txtHoTen.Location = new System.Drawing.Point(582, 21);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(182, 20);
@@ -248,35 +253,40 @@
             // 
             // txtTenLop
             // 
-            this.txtTenLop.Location = new System.Drawing.Point(275, 208);
+            this.txtTenLop.Enabled = false;
+            this.txtTenLop.Location = new System.Drawing.Point(281, 216);
             this.txtTenLop.Name = "txtTenLop";
             this.txtTenLop.Size = new System.Drawing.Size(182, 20);
             this.txtTenLop.TabIndex = 0;
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(275, 171);
+            this.txtSDT.Enabled = false;
+            this.txtSDT.Location = new System.Drawing.Point(281, 177);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(182, 20);
             this.txtSDT.TabIndex = 0;
             // 
             // txtQueQuan
             // 
-            this.txtQueQuan.Location = new System.Drawing.Point(275, 136);
+            this.txtQueQuan.Enabled = false;
+            this.txtQueQuan.Location = new System.Drawing.Point(281, 138);
             this.txtQueQuan.Name = "txtQueQuan";
             this.txtQueQuan.Size = new System.Drawing.Size(182, 20);
             this.txtQueQuan.TabIndex = 0;
             // 
             // txtCMND
             // 
-            this.txtCMND.Location = new System.Drawing.Point(275, 58);
+            this.txtCMND.Enabled = false;
+            this.txtCMND.Location = new System.Drawing.Point(281, 60);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(182, 20);
             this.txtCMND.TabIndex = 0;
             // 
             // txtMaSinhVien
             // 
-            this.txtMaSinhVien.Location = new System.Drawing.Point(275, 21);
+            this.txtMaSinhVien.Enabled = false;
+            this.txtMaSinhVien.Location = new System.Drawing.Point(281, 21);
             this.txtMaSinhVien.Name = "txtMaSinhVien";
             this.txtMaSinhVien.Size = new System.Drawing.Size(182, 20);
             this.txtMaSinhVien.TabIndex = 0;

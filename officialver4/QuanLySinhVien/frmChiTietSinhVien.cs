@@ -12,11 +12,23 @@ namespace QuanLySinhVien
 {
     public partial class frmChiTietSinhVien : Form
     {
+        public static string username = string.Empty;
+        public static string pass = string.Empty;
         string SinhVien_ID;
         public frmChiTietSinhVien(string MaSinhVien)
         {
             SinhVien_ID = MaSinhVien;
             InitializeComponent();
+            DangNhapHeThong DangNhap = new DangNhapHeThong();
+            if (DangNhap.checkOnlyRead(username, pass) == true)
+            {
+                Color hic = Color.FromArgb(54, 54, 54);
+                
+                button4.BackColor = hic;
+                button4.Enabled = false;
+                button3.BackColor = hic;
+                button3.Enabled = false;
+            }
         }
 
         private void frmChiTietSinhVien_Load(object sender, EventArgs e)
@@ -34,15 +46,25 @@ namespace QuanLySinhVien
             this.txtMaSinhVien.Text = td.Rows[0][0].ToString();
             this.txtHoTen.Text = td.Rows[0][1].ToString();
             this.txtCMND.Text = td.Rows[0][2].ToString();
-            this.mskNgaySinh.Text = td.Rows[0][4].ToString();
+            DateTime ngay = DateTime.Parse(td.Rows[0][4].ToString());
+            this.mskNgaySinh.Text = ngay.ToString("dd-MM-yyyy");
+            
             this.txtQueQuan.Text = td.Rows[0][5].ToString();
             this.txtSDT.Text = td.Rows[0][6].ToString();
             this.txtTenLop.Text = td.Rows[0][7].ToString();
             string hinhanh;
             hinhanh = td.Rows[0][8].ToString();
-            this.pictureBox1.Image = new Bitmap(Application.StartupPath + @"\hinhanh\" + hinhanh);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-
+            if(hinhanh.Length<=0)
+            {
+                this.pictureBox1.Image = new Bitmap(Application.StartupPath + @"\hinhanh\vodien.jpg" );
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            else
+            {
+                this.pictureBox1.Image = new Bitmap(Application.StartupPath + @"\hinhanh\" + hinhanh);
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            
             int sex;
             sex = Convert.ToInt16(td.Rows[0][3]);
             if (sex == 0)
@@ -58,10 +80,8 @@ namespace QuanLySinhVien
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
-            //frmTimSinhVien frm = new frmTimSinhVien();
+        {           
             this.Close();
-            //frm.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -107,9 +127,6 @@ namespace QuanLySinhVien
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

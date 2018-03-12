@@ -52,13 +52,14 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(6, 9);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label1.Location = new System.Drawing.Point(220, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(317, 31);
+            this.label1.Size = new System.Drawing.Size(283, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "DANH SÁCH SINH VIÊN";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // listView1
             // 
