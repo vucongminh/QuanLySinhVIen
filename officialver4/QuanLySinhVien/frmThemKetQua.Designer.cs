@@ -31,6 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemKetQua));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbLHP = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cbGhiChu = new System.Windows.Forms.ComboBox();
+            this.txtDiemTB = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtDiemThi = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,14 +49,6 @@
             this.cboMonHoc = new System.Windows.Forms.ComboBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtDiemThi = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtDiemTB = new System.Windows.Forms.TextBox();
-            this.cbGhiChu = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cbLHP = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,6 +86,84 @@
             this.groupBox1.Size = new System.Drawing.Size(366, 298);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // cbLHP
+            // 
+            this.cbLHP.FormattingEnabled = true;
+            this.cbLHP.Location = new System.Drawing.Point(142, 51);
+            this.cbLHP.Name = "cbLHP";
+            this.cbLHP.Size = new System.Drawing.Size(165, 21);
+            this.cbLHP.TabIndex = 10;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Blue;
+            this.label9.Location = new System.Drawing.Point(19, 53);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(109, 19);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Lớp Học Phần:";
+            // 
+            // cbGhiChu
+            // 
+            this.cbGhiChu.FormattingEnabled = true;
+            this.cbGhiChu.Items.AddRange(new object[] {
+            "Đạt",
+            "Không Đạt"});
+            this.cbGhiChu.Location = new System.Drawing.Point(142, 261);
+            this.cbGhiChu.Name = "cbGhiChu";
+            this.cbGhiChu.Size = new System.Drawing.Size(165, 21);
+            this.cbGhiChu.TabIndex = 8;
+            // 
+            // txtDiemTB
+            // 
+            this.txtDiemTB.Location = new System.Drawing.Point(142, 227);
+            this.txtDiemTB.Name = "txtDiemTB";
+            this.txtDiemTB.Size = new System.Drawing.Size(165, 20);
+            this.txtDiemTB.TabIndex = 7;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Blue;
+            this.label8.Location = new System.Drawing.Point(19, 263);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(65, 19);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "GhiChu:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Blue;
+            this.label7.Location = new System.Drawing.Point(19, 228);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 19);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "ĐiểmTB:";
+            // 
+            // txtDiemThi
+            // 
+            this.txtDiemThi.Location = new System.Drawing.Point(142, 192);
+            this.txtDiemThi.Name = "txtDiemThi";
+            this.txtDiemThi.Size = new System.Drawing.Size(165, 20);
+            this.txtDiemThi.TabIndex = 4;
+            this.txtDiemThi.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Blue;
+            this.label6.Location = new System.Drawing.Point(19, 193);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(72, 19);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "ĐiểmThi:";
             // 
             // label5
             // 
@@ -162,6 +240,7 @@
             // 
             // btnThem
             // 
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.Blue;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
@@ -171,11 +250,12 @@
             this.btnThem.Size = new System.Drawing.Size(80, 28);
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "OK";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Red;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
@@ -185,86 +265,8 @@
             this.button1.Size = new System.Drawing.Size(80, 28);
             this.button1.TabIndex = 2;
             this.button1.Text = "Thoát";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Blue;
-            this.label6.Location = new System.Drawing.Point(19, 193);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 19);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "ĐiểmThi:";
-            // 
-            // txtDiemThi
-            // 
-            this.txtDiemThi.Location = new System.Drawing.Point(142, 192);
-            this.txtDiemThi.Name = "txtDiemThi";
-            this.txtDiemThi.Size = new System.Drawing.Size(165, 20);
-            this.txtDiemThi.TabIndex = 4;
-            this.txtDiemThi.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Blue;
-            this.label7.Location = new System.Drawing.Point(19, 228);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 19);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "ĐiểmTB:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Blue;
-            this.label8.Location = new System.Drawing.Point(19, 263);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 19);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "GhiChu:";
-            // 
-            // txtDiemTB
-            // 
-            this.txtDiemTB.Location = new System.Drawing.Point(142, 227);
-            this.txtDiemTB.Name = "txtDiemTB";
-            this.txtDiemTB.Size = new System.Drawing.Size(165, 20);
-            this.txtDiemTB.TabIndex = 7;
-            // 
-            // cbGhiChu
-            // 
-            this.cbGhiChu.FormattingEnabled = true;
-            this.cbGhiChu.Items.AddRange(new object[] {
-            "Đạt",
-            "Không Đạt"});
-            this.cbGhiChu.Location = new System.Drawing.Point(142, 261);
-            this.cbGhiChu.Name = "cbGhiChu";
-            this.cbGhiChu.Size = new System.Drawing.Size(165, 21);
-            this.cbGhiChu.TabIndex = 8;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Blue;
-            this.label9.Location = new System.Drawing.Point(19, 53);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(109, 19);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Lớp Học Phần:";
-            // 
-            // cbLHP
-            // 
-            this.cbLHP.FormattingEnabled = true;
-            this.cbLHP.Location = new System.Drawing.Point(142, 51);
-            this.cbLHP.Name = "cbLHP";
-            this.cbLHP.Size = new System.Drawing.Size(165, 21);
-            this.cbLHP.TabIndex = 10;
             // 
             // frmThemKetQua
             // 
@@ -279,7 +281,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmThemKetQua";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmThemKetQua";
+            this.Text = "Thêm Kết Quả";
             this.Load += new System.EventHandler(this.frmThemKetQua_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

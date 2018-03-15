@@ -96,6 +96,7 @@
             // 
             // buttonKQ
             // 
+            this.buttonKQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonKQ.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKQ.ForeColor = System.Drawing.Color.Blue;
             this.buttonKQ.Location = new System.Drawing.Point(582, 180);
@@ -103,7 +104,7 @@
             this.buttonKQ.Size = new System.Drawing.Size(182, 56);
             this.buttonKQ.TabIndex = 6;
             this.buttonKQ.Text = "Kết Quả Học Tập";
-            this.buttonKQ.UseVisualStyleBackColor = true;
+            this.buttonKQ.UseVisualStyleBackColor = false;
             this.buttonKQ.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
@@ -284,6 +285,7 @@
             // 
             // txtMaSinhVien
             // 
+            this.txtMaSinhVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtMaSinhVien.Enabled = false;
             this.txtMaSinhVien.Location = new System.Drawing.Point(281, 21);
             this.txtMaSinhVien.Name = "txtMaSinhVien";
@@ -293,6 +295,7 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Red;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
@@ -302,11 +305,12 @@
             this.button2.Size = new System.Drawing.Size(90, 30);
             this.button2.TabIndex = 2;
             this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Blue;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
@@ -316,7 +320,7 @@
             this.button4.Size = new System.Drawing.Size(90, 30);
             this.button4.TabIndex = 2;
             this.button4.Text = "Sửa";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // frmChiTietSinhVien

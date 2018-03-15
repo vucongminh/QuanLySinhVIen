@@ -49,11 +49,11 @@
             this.btnHinhAnh = new System.Windows.Forms.Button();
             this.btnKetQuaHocTap = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -72,6 +72,7 @@
             // 
             // btnSua
             // 
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.Blue;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
@@ -81,11 +82,12 @@
             this.btnSua.Size = new System.Drawing.Size(91, 28);
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "OK";
-            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThoat
             // 
+            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.Red;
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
@@ -95,7 +97,7 @@
             this.btnThoat.Size = new System.Drawing.Size(91, 28);
             this.btnThoat.TabIndex = 2;
             this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // openFileDialog1
@@ -177,7 +179,6 @@
             this.cboLop.Name = "cboLop";
             this.cboLop.Size = new System.Drawing.Size(177, 21);
             this.cboLop.TabIndex = 5;
-           
             // 
             // groupBox2
             // 
@@ -239,6 +240,7 @@
             // 
             // btnKetQuaHocTap
             // 
+            this.btnKetQuaHocTap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnKetQuaHocTap.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKetQuaHocTap.ForeColor = System.Drawing.Color.Blue;
             this.btnKetQuaHocTap.Location = new System.Drawing.Point(587, 150);
@@ -246,7 +248,7 @@
             this.btnKetQuaHocTap.Size = new System.Drawing.Size(177, 64);
             this.btnKetQuaHocTap.TabIndex = 8;
             this.btnKetQuaHocTap.Text = "Kết Qủa Học Tập";
-            this.btnKetQuaHocTap.UseVisualStyleBackColor = true;
+            this.btnKetQuaHocTap.UseVisualStyleBackColor = false;
             this.btnKetQuaHocTap.Click += new System.EventHandler(this.btnKetQuaHocTap_Click);
             // 
             // groupBox1
@@ -274,6 +276,15 @@
             this.groupBox1.Size = new System.Drawing.Size(814, 253);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(276, 88);
+            this.maskedTextBox1.Mask = "00/00/0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(176, 20);
+            this.maskedTextBox1.TabIndex = 13;
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
             // 
             // label5
             // 
@@ -318,15 +329,6 @@
             this.label10.Size = new System.Drawing.Size(63, 17);
             this.label10.TabIndex = 9;
             this.label10.Text = "Họ Tên:";
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(276, 88);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(176, 20);
-            this.maskedTextBox1.TabIndex = 13;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
             // 
             // frmSuaThongTinSinhVien
             // 

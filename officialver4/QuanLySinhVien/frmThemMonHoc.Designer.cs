@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemMonHoc));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtMaMonHoc = new System.Windows.Forms.TextBox();
-            this.txtTenMonHoc = new System.Windows.Forms.TextBox();
-            this.txtGiangVien = new System.Windows.Forms.TextBox();
-            this.txtSoTrinh = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtSoTrinh = new System.Windows.Forms.TextBox();
+            this.txtGiangVien = new System.Windows.Forms.TextBox();
+            this.txtTenMonHoc = new System.Windows.Forms.TextBox();
+            this.txtMaMonHoc = new System.Windows.Forms.TextBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -71,44 +71,27 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // txtMaMonHoc
+            // label5
             // 
-            this.txtMaMonHoc.Location = new System.Drawing.Point(116, 30);
-            this.txtMaMonHoc.Name = "txtMaMonHoc";
-            this.txtMaMonHoc.Size = new System.Drawing.Size(154, 20);
-            this.txtMaMonHoc.TabIndex = 0;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Blue;
+            this.label5.Location = new System.Drawing.Point(296, 76);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(88, 19);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Giảng Viên:";
             // 
-            // txtTenMonHoc
+            // label4
             // 
-            this.txtTenMonHoc.Location = new System.Drawing.Point(116, 76);
-            this.txtTenMonHoc.Name = "txtTenMonHoc";
-            this.txtTenMonHoc.Size = new System.Drawing.Size(154, 20);
-            this.txtTenMonHoc.TabIndex = 1;
-            // 
-            // txtGiangVien
-            // 
-            this.txtGiangVien.Location = new System.Drawing.Point(386, 76);
-            this.txtGiangVien.Name = "txtGiangVien";
-            this.txtGiangVien.Size = new System.Drawing.Size(154, 20);
-            this.txtGiangVien.TabIndex = 3;
-            // 
-            // txtSoTrinh
-            // 
-            this.txtSoTrinh.Location = new System.Drawing.Point(386, 28);
-            this.txtSoTrinh.Name = "txtSoTrinh";
-            this.txtSoTrinh.Size = new System.Drawing.Size(154, 20);
-            this.txtSoTrinh.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(5, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Mã Môn Học:";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Blue;
+            this.label4.Location = new System.Drawing.Point(296, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 19);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Số Trinh:";
             // 
             // label3
             // 
@@ -121,30 +104,49 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Tên Môn Học:";
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(296, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 19);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Số Trinh:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(5, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 19);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Mã Môn Học:";
             // 
-            // label5
+            // txtSoTrinh
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(296, 76);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 19);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Giảng Viên:";
+            this.txtSoTrinh.Location = new System.Drawing.Point(386, 28);
+            this.txtSoTrinh.Name = "txtSoTrinh";
+            this.txtSoTrinh.Size = new System.Drawing.Size(154, 20);
+            this.txtSoTrinh.TabIndex = 2;
+            // 
+            // txtGiangVien
+            // 
+            this.txtGiangVien.Location = new System.Drawing.Point(386, 76);
+            this.txtGiangVien.Name = "txtGiangVien";
+            this.txtGiangVien.Size = new System.Drawing.Size(154, 20);
+            this.txtGiangVien.TabIndex = 3;
+            // 
+            // txtTenMonHoc
+            // 
+            this.txtTenMonHoc.Location = new System.Drawing.Point(116, 76);
+            this.txtTenMonHoc.Name = "txtTenMonHoc";
+            this.txtTenMonHoc.Size = new System.Drawing.Size(154, 20);
+            this.txtTenMonHoc.TabIndex = 1;
+            // 
+            // txtMaMonHoc
+            // 
+            this.txtMaMonHoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtMaMonHoc.Location = new System.Drawing.Point(116, 30);
+            this.txtMaMonHoc.Name = "txtMaMonHoc";
+            this.txtMaMonHoc.Size = new System.Drawing.Size(154, 20);
+            this.txtMaMonHoc.TabIndex = 0;
             // 
             // btnThem
             // 
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.Blue;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
@@ -154,11 +156,12 @@
             this.btnThem.Size = new System.Drawing.Size(79, 28);
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnThoat
             // 
+            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.Red;
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
@@ -168,7 +171,7 @@
             this.btnThoat.Size = new System.Drawing.Size(79, 28);
             this.btnThoat.TabIndex = 2;
             this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // frmThemMonHoc
@@ -184,7 +187,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmThemMonHoc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmThemMonHoc";
+            this.Text = "Thêm Môn Học";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

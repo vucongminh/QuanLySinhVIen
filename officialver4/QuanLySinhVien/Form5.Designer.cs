@@ -84,6 +84,7 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Red;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
@@ -93,11 +94,12 @@
             this.button3.Size = new System.Drawing.Size(96, 31);
             this.button3.TabIndex = 3;
             this.button3.Text = "Thoát";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
@@ -107,11 +109,12 @@
             this.button2.Size = new System.Drawing.Size(96, 31);
             this.button2.TabIndex = 3;
             this.button2.Text = "Xóa";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtmsv
             // 
+            this.txtmsv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtmsv.Location = new System.Drawing.Point(124, 41);
             this.txtmsv.Name = "txtmsv";
             this.txtmsv.Size = new System.Drawing.Size(190, 26);
@@ -331,13 +334,14 @@
             // 
             // btnXoaKetQuaHocTap
             // 
+            this.btnXoaKetQuaHocTap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnXoaKetQuaHocTap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaKetQuaHocTap.Location = new System.Drawing.Point(546, 285);
             this.btnXoaKetQuaHocTap.Name = "btnXoaKetQuaHocTap";
             this.btnXoaKetQuaHocTap.Size = new System.Drawing.Size(198, 38);
             this.btnXoaKetQuaHocTap.TabIndex = 10;
             this.btnXoaKetQuaHocTap.Text = "Xoá Kết Qủa Học Tập";
-            this.btnXoaKetQuaHocTap.UseVisualStyleBackColor = true;
+            this.btnXoaKetQuaHocTap.UseVisualStyleBackColor = false;
             this.btnXoaKetQuaHocTap.Click += new System.EventHandler(this.btnXoaKetQuaHocTap_Click);
             // 
             // frmxoaSV

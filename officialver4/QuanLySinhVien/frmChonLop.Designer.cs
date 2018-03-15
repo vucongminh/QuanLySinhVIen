@@ -80,6 +80,7 @@
             // 
             // btnDS
             // 
+            this.btnDS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnDS.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDS.ForeColor = System.Drawing.Color.Blue;
             this.btnDS.Image = ((System.Drawing.Image)(resources.GetObject("btnDS.Image")));
@@ -89,11 +90,12 @@
             this.btnDS.Size = new System.Drawing.Size(137, 29);
             this.btnDS.TabIndex = 2;
             this.btnDS.Text = "Danh Sách SV";
-            this.btnDS.UseVisualStyleBackColor = true;
+            this.btnDS.UseVisualStyleBackColor = false;
             this.btnDS.Click += new System.EventHandler(this.btnDS_Click);
             // 
             // btnThoat
             // 
+            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.Red;
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
@@ -103,7 +105,7 @@
             this.btnThoat.Size = new System.Drawing.Size(132, 29);
             this.btnThoat.TabIndex = 3;
             this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.button2_Click);
             // 
             // frmChonLop

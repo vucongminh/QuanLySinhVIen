@@ -124,6 +124,7 @@
             // 
             // btnHinhAnh
             // 
+            this.btnHinhAnh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnHinhAnh.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHinhAnh.ForeColor = System.Drawing.Color.Blue;
             this.btnHinhAnh.Image = ((System.Drawing.Image)(resources.GetObject("btnHinhAnh.Image")));
@@ -134,7 +135,7 @@
             this.btnHinhAnh.TabIndex = 13;
             this.btnHinhAnh.Text = "Hinh Anh";
             this.btnHinhAnh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHinhAnh.UseVisualStyleBackColor = true;
+            this.btnHinhAnh.UseVisualStyleBackColor = false;
             this.btnHinhAnh.Click += new System.EventHandler(this.btnHinhAnh_Click);
             // 
             // pictureBox1
@@ -148,6 +149,7 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button3.Location = new System.Drawing.Point(637, 202);
@@ -155,7 +157,7 @@
             this.button3.Size = new System.Drawing.Size(174, 34);
             this.button3.TabIndex = 11;
             this.button3.Text = "Sửa Kết Qủa Học Tập";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label9
@@ -340,7 +342,7 @@
             // 
             // txtmsv
             // 
-            this.txtmsv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtmsv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtmsv.ForeColor = System.Drawing.Color.Red;
             this.txtmsv.Location = new System.Drawing.Point(128, 45);
             this.txtmsv.Name = "txtmsv";
@@ -350,6 +352,7 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
@@ -359,11 +362,12 @@
             this.button1.Size = new System.Drawing.Size(75, 30);
             this.button1.TabIndex = 2;
             this.button1.Text = "Sửa";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Red;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
@@ -373,7 +377,7 @@
             this.button2.Size = new System.Drawing.Size(75, 30);
             this.button2.TabIndex = 3;
             this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox4

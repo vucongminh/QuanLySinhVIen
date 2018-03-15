@@ -57,7 +57,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label1.Location = new System.Drawing.Point(112, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(461, 28);
+            this.label1.Size = new System.Drawing.Size(460, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "KẾT QUẢ HỌC TẬP SINH VIÊN CẦN SỬA";
             // 
@@ -126,7 +126,7 @@
             this.label3.ForeColor = System.Drawing.Color.Blue;
             this.label3.Location = new System.Drawing.Point(22, 87);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 17);
+            this.label3.Size = new System.Drawing.Size(104, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Tên Sinh Viên:";
             // 
@@ -137,7 +137,7 @@
             this.label2.ForeColor = System.Drawing.Color.Blue;
             this.label2.Location = new System.Drawing.Point(22, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 17);
+            this.label2.Size = new System.Drawing.Size(100, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Mã Sinh Viên:";
             // 
@@ -171,7 +171,6 @@
             this.cbxMonHoc.Size = new System.Drawing.Size(160, 25);
             this.cbxMonHoc.TabIndex = 1;
             this.cbxMonHoc.SelectedIndexChanged += new System.EventHandler(this.cbxMonHoc_SelectedIndexChanged);
-            //this.cbxMonHoc.Click += new System.EventHandler(this.cbxMonHoc_Click);
             // 
             // txtTenSV
             // 
@@ -205,20 +204,22 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Red;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(113, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(77, 31);
+            this.button2.Size = new System.Drawing.Size(83, 31);
             this.button2.TabIndex = 0;
             this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Blue;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
@@ -228,7 +229,7 @@
             this.button1.Size = new System.Drawing.Size(77, 31);
             this.button1.TabIndex = 0;
             this.button1.Text = "Sửa";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmsuakqSV
@@ -240,6 +241,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmsuakqSV";
             this.Text = "SỬA KẾT QUẢ SINH VIÊN";
             this.Load += new System.EventHandler(this.frmsuakqSV_Load);
