@@ -120,9 +120,9 @@
             this.txtTenDangNhap.BackColor = System.Drawing.Color.White;
             this.txtTenDangNhap.Location = new System.Drawing.Point(127, 19);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.ReadOnly = true;
             this.txtTenDangNhap.Size = new System.Drawing.Size(146, 20);
             this.txtTenDangNhap.TabIndex = 0;
+            this.txtTenDangNhap.TextChanged += new System.EventHandler(this.txtTenDangNhap_TextChanged);
             // 
             // btnSua
             // 

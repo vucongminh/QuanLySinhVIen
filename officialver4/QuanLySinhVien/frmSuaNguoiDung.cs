@@ -55,7 +55,7 @@ namespace QuanLySinhVien
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText="UPDATE QuanLyNguoiDung SET QuyenHan='"+txtQuyenHan.Text+"' WHERE TenDangNhap='"+txtTenDangNhap.Text+"' AND MatKhau='"+txtMatKhau.Text+"'";
+            cmd.CommandText="UPDATE QuanLyNguoiDung SET QuyenHan='"+txtQuyenHan.Text+ "',TenDangNhap='" + txtTenDangNhap.Text + "' ,MatKhau='" + txtMatKhau.Text + "' WHERE TenDangNhap='"+TenDangNhap+"' AND MatKhau='"+MatKhau+"'";
             DialogResult result;
             result = MessageBox.Show("Bạn Có Muốn Thay Đổi Thông Tin Không?","Thông Báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
@@ -68,5 +68,12 @@ namespace QuanLySinhVien
                 frm.Show();
             }
         }
+        private void txtTenDangNhap_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
     }
 }
