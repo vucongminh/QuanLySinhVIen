@@ -12,9 +12,22 @@ namespace QuanLySinhVien
 {
     public partial class frmDSMonHoc : Form
     {
+        public static string username = string.Empty;
+        public static string pass = string.Empty;
         public frmDSMonHoc()
         {
             InitializeComponent();
+            DangNhapHeThong DangNhap = new DangNhapHeThong();
+            if (DangNhap.checkOnlyRead(username, pass) == true)
+            {
+                Color hic = Color.FromArgb(54, 54, 54);
+                btnSua.BackColor = hic;
+                btnSua.Enabled = false;
+                btnThem.BackColor = hic;
+                btnThem.Enabled = false;
+                btnXoa.BackColor = hic;
+                btnXoa.Enabled = false;
+            }
         }
 
         private void frmDSMonHoc_Load(object sender, EventArgs e)
@@ -24,7 +37,7 @@ namespace QuanLySinhVien
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "SELECT * FROM MonHoc";
+            cmd.CommandText = "SELECT MaHP,TenHP,SoTC,HocKy,TenBM FROM HOCPHAN,BOMON where HOCPHAN.MaBM=BOMON.MaBM";
             SqlDataReader rd;
             rd = cmd.ExecuteReader();
             DataTable td = new DataTable();
@@ -35,6 +48,7 @@ namespace QuanLySinhVien
                 item.SubItems.Add(td.Rows[i][1].ToString());
                 item.SubItems.Add(td.Rows[i][2].ToString());
                 item.SubItems.Add(td.Rows[i][3].ToString());
+                item.SubItems.Add(td.Rows[i][4].ToString());
                 listView1.Items.Add(item);
 
             }
@@ -83,6 +97,11 @@ namespace QuanLySinhVien
             this.Close();
             frmXoaMonHoc frm = new frmXoaMonHoc(str);
             frm.Show();
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
