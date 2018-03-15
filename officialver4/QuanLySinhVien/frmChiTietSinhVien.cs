@@ -26,8 +26,7 @@ namespace QuanLySinhVien
                 
                 button4.BackColor = hic;
                 button4.Enabled = false;
-                button3.BackColor = hic;
-                button3.Enabled = false;
+                
             }
         }
 
@@ -96,32 +95,6 @@ namespace QuanLySinhVien
             frmSuaThongTinSinhVien frm = new frmSuaThongTinSinhVien(SinhVien_ID);
             frm.Show();
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = KetNoi.str;
-            con.Open();
-            SqlCommand cmd1 = new SqlCommand();
-            SqlCommand cmd2 = new SqlCommand();
-            cmd1.Connection = con;
-            cmd2.Connection = con;
-            cmd1.CommandText = "DELETE FROM KetQua Where ID_SinhVien='" + SinhVien_ID + "'";
-            cmd2.CommandText = "DELETE FROM SinhVien Where SinhVien_ID='" + SinhVien_ID + "'";
-            DialogResult result;
-            result = MessageBox.Show("BẠN CÓ MUỐN THAY XÓA THÔNG TIN KHÔNG?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                cmd1.ExecuteNonQuery();
-                cmd2.ExecuteNonQuery();
-                MessageBox.Show("XÓA THÀNH CÔNG", "THÔNG BÁO");
-            }
-            con.Close();
-            this.Close();
-            frmTimSinhVien frm = new frmTimSinhVien();
-            frm.Show();
-        }
-
         private void txtMaSinhVien_TextChanged(object sender, EventArgs e)
         {
 

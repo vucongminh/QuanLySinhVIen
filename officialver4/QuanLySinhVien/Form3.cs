@@ -73,7 +73,7 @@ namespace QuanLySinhVien
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "SELECT * FROM Lop order by Lop_ID ";
+            cmd.CommandText = "SELECT * FROM Lop order by MaLop ";
             SqlDataReader rd;
             rd = cmd.ExecuteReader();
             DataTable td = new DataTable();

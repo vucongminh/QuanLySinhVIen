@@ -37,7 +37,7 @@ namespace QuanLySinhVien
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "SELECT MaLop,TenLop,TenSV,TenGV FROM LOP ,SINHVIEN , GIAOVIEN  where LOP.MaLopTruong=SINHVIEN.MaSV and LOP.MaGVCN=GIAOVIEN.MaGV ";
+            cmd.CommandText = "SELECT Lop.MaLop,TenLop,TenSV,TenGV FROM LOP ,SINHVIEN , GIAOVIEN  where LOP.MaLopTruong=SINHVIEN.MaSV and LOP.MaGVCN=GIAOVIEN.MaGV ";
             SqlDataReader rd;
             rd = cmd.ExecuteReader();
             DataTable td = new DataTable();

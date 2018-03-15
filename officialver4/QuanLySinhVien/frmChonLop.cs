@@ -49,19 +49,27 @@ namespace QuanLySinhVien
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            string TenLop;
-            TenLop = cboDSLop.SelectedItem.ToString();
-            cmd.CommandText = "SELECT MaLop FROM LOP WHERE TenLop=N'"+TenLop+"'";
-            SqlDataReader rd;
-            rd = cmd.ExecuteReader();
-            DataTable td = new DataTable();
-            td.Load(rd);
-            string MaLop;
-            MaLop = td.Rows[0][0].ToString();
-            con.Close();
-            frmDSSV frmDS = new frmDSSV(MaLop);
-            frmDS.Show();
-            this.Close();
+            try
+            {
+                string TenLop;
+                TenLop = cboDSLop.SelectedItem.ToString();
+                cmd.CommandText = "SELECT MaLop FROM LOP WHERE TenLop=N'" + TenLop + "'";
+                SqlDataReader rd;
+                rd = cmd.ExecuteReader();
+                DataTable td = new DataTable();
+                td.Load(rd);
+                string MaLop;
+                MaLop = td.Rows[0][0].ToString();
+                con.Close();
+                frmDSSV frmDS = new frmDSSV(MaLop);
+                frmDS.Show();
+                this.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Tên lớp không được để trống !!.\n Vui lòng chọn tên lớp ^^!", "THÔNG BÁO");
+            }
+           
 
         }
 

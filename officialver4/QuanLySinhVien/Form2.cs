@@ -39,7 +39,7 @@ namespace QuanLySinhVien
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "SELECT MaSV,TenSV,CMND,GioiTinh,NgaySinh,QueQuan,SdtSV,TenLop FROM SINHVIEN,LOP WHERE SINHVIEN.MaLop = '"+MaLop+"' and LOP.MaLop = '"+MaLop+"'";
+            cmd.CommandText = "SELECT MaSV,TenSV,CMND,GioiTinh,NgaySinh,QueQuan,SdtSV,TenLop FROM SINHVIEN,LOP WHERE SINHVIEN.MaLop = '" + MaLop + "' and LOP.MaLop = '" + MaLop + "'";
             SqlDataReader rd;
             rd = cmd.ExecuteReader();
             DataTable td = new DataTable();
@@ -52,11 +52,11 @@ namespace QuanLySinhVien
                 if (Convert.ToInt16(td.Rows[i][3]) == 0)
                     item.SubItems.Add("Nam");
                 else
-                    item.SubItems.Add("Nu");              
+                    item.SubItems.Add("Nu");
                 item.SubItems.Add(td.Rows[i][4].ToString());
                 item.SubItems.Add(td.Rows[i][5].ToString());
                 item.SubItems.Add(td.Rows[i][6].ToString());
-                item.SubItems.Add(td.Rows[i][7].ToString());         
+                item.SubItems.Add(td.Rows[i][7].ToString());
                 listView1.Items.Add(item);
             }
             con.Close();
@@ -66,7 +66,7 @@ namespace QuanLySinhVien
         {
             frmThemSV frmthem = new frmThemSV(MaLop);
             frmthem.Show();
-            
+
             this.Close();
         }
 
@@ -88,48 +88,65 @@ namespace QuanLySinhVien
         }
 
 
-      private void listView1_Click(object sender, EventArgs e)
+        private void listView1_Click(object sender, EventArgs e)
         {
             string str;
             int row = this.listView1.SelectedItems[0].Index;
             str = this.listView1.Items[row].SubItems[0].Text;
-            frmsuaSV frm = new frmsuaSV(str,MaLop);
-           
-            
+            frmsuaSV frm = new frmsuaSV(str, MaLop);
         }
 
 
-      private void button2_Click_1(object sender, EventArgs e)
-      {
-          string str;
-          int row = this.listView1.SelectedItems[0].Index;
-          str = this.listView1.Items[row].SubItems[0].Text;
-          frmsuaSV frm = new frmsuaSV(str,MaLop);
-          frm.Show();
-          this.Close();
-      }
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string str;
+                int row = this.listView1.SelectedItems[0].Index;
+                str = this.listView1.Items[row].SubItems[0].Text;
+                frmsuaSV frm = new frmsuaSV(str, MaLop);
+                frm.Show();
+                this.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Vui lòng chọn một hàng bạn muốn thao tác ^^!", "THÔNG BÁO");
+            }
+            
+        }
 
-      private void button3_Click(object sender, EventArgs e)
-      {
-          string str;
-          int row = this.listView1.SelectedItems[0].Index;
-          str = this.listView1.Items[row].SubItems[0].Text;
-          frmxoaSV frm = new frmxoaSV(str,MaLop);
-          frm.Show();
-          this.Close();
-      }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string str;
+                int row = this.listView1.SelectedItems[0].Index;
+                str = this.listView1.Items[row].SubItems[0].Text;
+                frmxoaSV frm = new frmxoaSV(str, MaLop);
+                frm.Show();
+                this.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Vui lòng chọn một hàng bạn muốn thao tác ^^!", "THÔNG BÁO");
+            }
 
-      private void btnChiTiet_Click(object sender, EventArgs e)
-      {
-          string str;
-          int row = this.listView1.SelectedItems[0].Index;
-          str = this.listView1.Items[row].SubItems[0].Text;
-          frmChiTietSinhVien frm = new frmChiTietSinhVien(str);
-         
-          frm.Show();
+        }
 
-      }
-
-      
+        private void btnChiTiet_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string str;
+                int row = this.listView1.SelectedItems[0].Index;
+                str = this.listView1.Items[row].SubItems[0].Text;
+                frmChiTietSinhVien frm = new frmChiTietSinhVien(str);
+                frm.Show();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Vui lòng chọn một hàng bạn muốn thao tác ^^!", "THÔNG BÁO");
+            }
+        }
     }
 }
