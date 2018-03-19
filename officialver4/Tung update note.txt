@@ -2,3 +2,4 @@
 - resource form1
 - Cac phan lien quan den Lop Va BoMon
 _ proc insert (them) cho Lop va BoMon
+- mon hoc (hocphan) va lophocphan
