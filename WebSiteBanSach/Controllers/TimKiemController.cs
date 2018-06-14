@@ -16,7 +16,7 @@ namespace WebSiteBanSach.Controllers
         [HttpPost]
         public ActionResult KetQuaTimKiem(FormCollection f,int? page)
         {
-            string sTuKhoa = f["txtTimKiem"].ToString();
+            string sTuKhoa = f["txtTimKiem2"].ToString();
             ViewBag.TuKhoa = sTuKhoa;
             List<Sach> lstKQTK = db.Saches.Where(n => n.TenSach.Contains(sTuKhoa)).ToList();
             //Phân trang

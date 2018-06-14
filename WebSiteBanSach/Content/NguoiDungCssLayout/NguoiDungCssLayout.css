@@ -26,11 +26,12 @@ div#ToanTrang {
 #divDanhMuc {
 height:30px;
 
+
 }
 /*css cho menu header*/
 .navMenu {
-    float:right;
-    margin-right:10%;
+    float:left
+    
 }
 .navMenu li{
     display:inline;
@@ -51,22 +52,20 @@ height:30px;
 }
 .navMenu a:hover {
     text-decoration:none;
-
 }
 /*css divTimKiem*/
-#txtTimKiem {
-    float:left;
-    margin-left:5%;
+#txtTimKiem {    
+  float:right
 }
 #txtTimKiem input{
-     height:0;
-     
+     height:0;         
 }
 /*css image button hình ảnh tìm kiếm*/
+
 #divHinhAnhTimKiem button {
-    margin-right:-65px;
-    padding:0 10px 0 10px;
-    background-color:#426db5;
+    margin-right: -65px;
+    padding: 0 10px 0 10px;
+    background-color: #24444b;
 }
 #divHinhAnhTimKiem button:hover {
     
@@ -81,7 +80,7 @@ height:30px;
 /*Css cho nivoslider */
 #slider {
     float:right;
-    width:900px;
+    width:800px;
     height:360px;
  
 }

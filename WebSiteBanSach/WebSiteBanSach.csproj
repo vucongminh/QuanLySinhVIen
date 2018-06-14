@@ -242,6 +242,7 @@
     <Content Include="Content\font-awesome-4.2.0\css\font-awesome.min.css" />
     <Content Include="Content\font-awesome-4.2.0\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\NguoiDungCssLayout\fonts.css" />
+    <Content Include="Content\NguoiDungCssLayout\NewUserCss.css" />
     <Content Include="Content\NguoiDungCssLayout\NguoiDungCssLayout.css" />
     <Content Include="Content\NguoiDungCssLayout\screen.css" />
     <Content Include="Content\PagedList.css" />
@@ -594,7 +595,13 @@
     <Content Include="HinhAnh\Anh1.png" />
     <Content Include="HinhAnh\Anh2.png" />
     <Content Include="HinhAnh\Anh3.png" />
+    <Content Include="HinhAnh\Anh4.jpg" />
+    <Content Include="HinhAnh\Anh5.jpg" />
+    <Content Include="HinhAnh\Anh6.jpg" />
+    <Content Include="HinhAnh\cart.png" />
+    <Content Include="HinhAnh\hic.png" />
     <Content Include="HinhAnh\imgSearch.png" />
+    <Content Include="HinhAnh\phone.png" />
     <Content Include="NivoSlider\jquery.nivo.slider.js" />
     <Content Include="NivoSlider\jquery.nivo.slider.pack.js" />
     <Content Include="NivoSlider\nivo-slider.css" />
