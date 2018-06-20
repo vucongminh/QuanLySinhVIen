@@ -5,18 +5,18 @@
     Layout = "~/Views/Layout/AdminLayout.cshtml";
 }
 
-<h2>HienThi</h2>
+
 
 <div>
-    <h4>Sach</h4>
-	<hr />
+    <strong class="card-title" style="margin-left:20px; font-size:30px; color:aqua;">HIỂN THỊ SÁCH</strong>
+    <hr />
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.MaSach)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.MaSach)
+            <span style="font-size:15pt;margin-left:5px;color:blue">@Model.MaSach</span>
         </dd>
 
         <dt>
@@ -68,7 +68,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ChuDe.TenChuDe)
+            Tên Chủ Đề: 
         </dt>
 
         <dd>
@@ -80,7 +80,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.NhaXuatBan.TenNXB)
+            Tên NXB: 
         </dd>
 
         <dt>
@@ -93,7 +93,11 @@
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Chỉnh sửa", "ChinhSua", new { @MaSach=Model.MaSach }) |
-    @Html.ActionLink("Trở về", "Index")
-</p>
+
+<div class="form-actions no-color" style="margin-top:1px">
+    <div class="col-md-offset-2 col-md-10">
+        <a href="@Url.Action("ChinhSua","QuanLySanPham", new { @MaSach=Model.MaSach })" class="btn btn-default" style="background-color:greenyellow ">Chỉnh Sửa</a> |
+        <a href="@Url.Action("Index","QuanLySanPham")" class="btn btn-default" style="background-color:plum ">Trở Về</a>
+
+    </div>
+</div>

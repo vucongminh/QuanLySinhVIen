@@ -7,6 +7,7 @@ using WebSiteBanSach.Models;
 using PagedList;
 using PagedList.Mvc;
 using System.IO;
+using System.Net.Http;
 namespace WebSiteBanSach.Controllers
 {
     public class QuanLySanPhamController : Controller
@@ -14,10 +15,31 @@ namespace WebSiteBanSach.Controllers
         //
         // GET: /QuanLySanPham/
         QuanLyBanSachEntities db = new QuanLyBanSachEntities();
-        public ActionResult Index(int? page)
+        public ActionResult Index(int? page, string SearchText)
         {
             int pageNumber = (page ?? 1);
             int pageSize = 10;
+
+            
+
+            int parsedValue;
+            if (!string.IsNullOrEmpty(SearchText))
+            {
+                if (Int32.TryParse(SearchText, out parsedValue))
+                {
+                    var result = db.Saches.AsEnumerable().Where(s => s.MaSach.ToString().Contains(SearchText));
+                    return View(result.ToList().OrderBy(n => n.MaSach).ToPagedList(pageNumber, pageSize = 100));
+
+                }
+
+                else
+                {
+                    var result = db.Saches.Where(s => s.TenSach.Contains(SearchText));
+                    return View(result.ToList().OrderBy(n => n.MaSach).ToPagedList(pageNumber, pageSize = 100));
+                }
+
+            }
+
             return View(db.Saches.ToList().OrderBy(n=>n.MaSach).ToPagedList(pageNumber,pageSize));
         }
         //Thêm mới 
