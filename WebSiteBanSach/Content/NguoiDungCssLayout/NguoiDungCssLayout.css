@@ -54,17 +54,21 @@ height:30px;
     text-decoration:none;
 }
 /*css divTimKiem*/
-#txtTimKiem {    
+#txtTimKiem {  
+    height:40px;
+    width:400px;
+  margin-right:70px;
   float:right
 }
-#txtTimKiem input{
+/*#txtTimKiem input{
      height:0;         
-}
+}*/
 /*css image button hình ảnh tìm kiếm*/
-
+#divHinhAnhTimKiem{
+    display:inline
+}
 #divHinhAnhTimKiem button {
-    margin-right: -65px;
-    padding: 0 10px 0 10px;
+    
     background-color: #24444b;
 }
 #divHinhAnhTimKiem button:hover {

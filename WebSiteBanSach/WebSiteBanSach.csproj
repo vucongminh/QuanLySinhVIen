@@ -173,8 +173,10 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NguoiDungController.cs" />
     <Compile Include="Controllers\NhaXuatBanController.cs" />
+    <Compile Include="Controllers\QuanLyNXBController.cs" />
     <Compile Include="Controllers\QuanLySanPhamController.cs" />
     <Compile Include="Controllers\SachController.cs" />
+    <Compile Include="Controllers\TacGiaController.cs" />
     <Compile Include="Controllers\TimKiemController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -202,6 +204,7 @@
       <DependentUpon>QuanLyBanSachModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Metadata\Sach.metadata.cs" />
+    <Compile Include="Models\Metadata\TacGia.metadata.cs" />
     <Compile Include="Models\NhaXuatBan.cs">
       <DependentUpon>QuanLyBanSachModel.tt</DependentUpon>
     </Compile>
@@ -1848,6 +1851,8 @@
     <Content Include="Views\QuanLySanPham\Xoa.cshtml" />
     <Content Include="Views\TimKiem\KetQuaTimKiem.cshtml" />
     <Content Include="Views\Layout\AdminLayout2.cshtml" />
+    <Content Include="Views\Layout\LayoutNonSlider.cshtml" />
+    <Content Include="Views\Layout\NonSlider_Sidebar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

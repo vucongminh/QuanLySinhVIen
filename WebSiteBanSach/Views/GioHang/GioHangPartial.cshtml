@@ -10,16 +10,18 @@
         line-height: 1;
         padding: 3px 7px;
         text-align: center;
-        vertical-align: middle;
+        /*vertical-align: middle;*/
         white-space: nowrap;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         
         
     }
-   
-  
+    .div_cart:hover {
+       
+    }   
+
 </style>
-<div style="border:solid 1px rgba(0,0,0,.1);height:70px;width:100px">
+<div class="div_cart" style="border:solid 1px rgba(0,0,0,.1);height:70px;width:100px">
     <a id="button_GioHang" href="@Url.Action("GioHang","GioHang")" style="text-decoration:none">
         <img id="img_GioHang" src="~/HinhAnh/cart.png" height="70px" width="70px" />
         <span class="badge">@ViewBag.TongSoLuong</span>
