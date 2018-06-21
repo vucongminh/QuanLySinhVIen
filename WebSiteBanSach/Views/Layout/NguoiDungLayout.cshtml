@@ -17,7 +17,7 @@
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/NivoSlider/jquery.nivo.slider.js"></script>
     <script src="~/NivoSlider/jquery.nivo.slider.pack.js"></script>
-    
+
 </head>
 
 <body>
@@ -30,57 +30,66 @@
         <section class="blank">
             <div class="headerBar">
                 @*<div class="icDienThoai">
-                    <i class="fa fa-phone"></i>
-                    (04) 987 654 321
-                </div>*@
-               
-                @*<div class="DangKyDangNhap">
-                    @Html.Action("GioHangPartial","GioHang")
-                    <i class="fa fa-sign-in"></i>
-                    @Html.ActionLink("Đăng ký", "DangKy","NguoiDung", null, htmlAttributes: new { @class = "DangKy" })
-                    <i class="fa fa-unlock"></i>
-                    @Html.ActionLink("Đăng nhập", "DangNhap","NguoiDung", null, htmlAttributes: new { @class = "DangNhap" })
+                        <i class="fa fa-phone"></i>
+                        (04) 987 654 321
+                    </div>*@
 
-                </div>*@
+                @*<div class="DangKyDangNhap">
+                        @Html.Action("GioHangPartial","GioHang")
+                        <i class="fa fa-sign-in"></i>
+                        @Html.ActionLink("Đăng ký", "DangKy","NguoiDung", null, htmlAttributes: new { @class = "DangKy" })
+                        <i class="fa fa-unlock"></i>
+                        @Html.ActionLink("Đăng nhập", "DangNhap","NguoiDung", null, htmlAttributes: new { @class = "DangNhap" })
+
+                    </div>*@
                 <div id="Logo">
                     <a href="@Url.Action("Index","Home")">
                         <img src="~/HinhAnh/hic.png" />
                     </a>
                 </div>
-                
-                    <div id="DangNhap_DangKi" style="font-size:12px;font-weight:lighter">
-                        <div>
-                            <a href="#">
-                                <img src="~/HinhAnh/phone.png" width="10px" />000101011 |
-                            </a>
-                            @Html.ActionLink("Đăng ký", "DangKy", "NguoiDung", null, htmlAttributes: new { @class = "DangKy" }) |
-                            @Html.ActionLink("Đăng nhập", "DangNhap", "NguoiDung", null, htmlAttributes: new { @class = "DangNhap" })
-                            <br />
-                        </div>
-                        <div style="border-top:.1px solid gray;margin-top:10px;padding-top:5px">
-                            <p>Miễn phí vận chuyển đơn hàng <span style="color:red">TRÊN 300k-HÀ NỘI</span></p>
-                        </div>
+
+                <div id="DangNhap_DangKi" style="font-size:12px;font-weight:lighter">
+                    <div>
+                        @if (Session["Username"] != null)
+                        {
+
+                            <text> <strong>Xin Chào @Session["UserName"]</strong> </text>
+                            @:[ @Html.ActionLink("Đăng Xuất","Index", null, htmlAttributes: new { @class = "DangXuat" }) ]
+
+                        }
+                        else
+                        {
+                            @:[ @Html.ActionLink("Đăng ký", "DangKy", "NguoiDung", null, htmlAttributes: new { @class = "DangKy" }) ]
+                            @:[  @Html.ActionLink("Đăng nhập", "DangNhap", "NguoiDung", null, htmlAttributes: new { @class = "DangNhap" })]
+                        }
+                        <br />
                     </div>
-                    <div id="GioHang" >
-                        @Html.Action("GioHangPartial", "GioHang")
+                    <div style="border-top:.1px solid gray;margin-top:10px;padding-top:5px">
+                        <p>Miễn phí vận chuyển đơn hàng <span style="color:red">TRÊN 300k-HÀ NỘI</span></p>
                     </div>
-                  
-                
-                
+                </div>
+                <div id="GioHang">
+                    @Html.Action("GioHangPartial", "GioHang")
+                </div>
+
+
+
             </div>
-           
+
 
             @*Xây dựng div menu header*@
 
             <div style="background-color: #24444b" class="flash success" id="divDanhMuc">
                 @*Hộp thoại tìm kiếm bên phải*@
-                <div id="txtTimKiem">                                   
-                       @using (Html.BeginForm("KetQuaTimKiem", "TimKiem", FormMethod.Post))
-                       {
-                       @Html.TextBox("txtTimKiem2", "", htmlAttributes: new { @class = "TextBoxTimKiem", @placeholder = "Nhập vào từ khóa cần tìm ..." })
-                           <button type="submit" style="height:34px;width:40px;   padding:0 0;background-color: #24444b;"><img src="~/HinhAnh/imgSearch.png" style="    width:20px;
-    height:20px;"/> </button> 
-                       }
+                <div id="txtTimKiem">
+                    @using (Html.BeginForm("KetQuaTimKiem", "TimKiem", FormMethod.Post))
+                    {
+                        @Html.TextBox("txtTimKiem2", "", htmlAttributes: new { @class = "TextBoxTimKiem", @placeholder = "Nhập vào từ khóa cần tìm ..." })
+                        <button type="submit" style="height:34px;width:40px;   padding:0 0;background-color: #24444b;">
+                            <img src="~/HinhAnh/imgSearch.png" style="    width:20px;
+    height:20px;" />
+                        </button>
+                    }
 
                 </div>
                 @*Menu trái header*@
@@ -153,7 +162,7 @@
                 @RenderBody()
 
             </div>
-           
+
             <div>
                 @RenderSection("NoiDungBenPhai", false)
             </div>
@@ -165,14 +174,14 @@
 
         </div>
     </div>
-    
+
     @*Script Chạy nivoslider*@
     <script type="text/javascript">
         $(window).load(function () {
             $('#slider').nivoSlider({
                 controlNav: false,               // 1,2,3... navigation
                 nextText: '',
-                prevText:''
+                prevText: ''
             });
         });
     </script>

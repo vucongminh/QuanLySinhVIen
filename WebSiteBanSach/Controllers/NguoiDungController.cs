@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using WebSiteBanSach.Models;
 
 namespace WebSiteBanSach.Controllers
@@ -16,6 +17,14 @@ namespace WebSiteBanSach.Controllers
         {
             return View();
         }
+
+        public ActionResult DangXuat()
+        {
+            FormsAuthentication.SignOut();
+            Session["UserName"] = null; // it will clear the session at the end of request
+            return RedirectToAction("Index", "Home");
+        }
+
         [HttpGet]
         public ActionResult DangKy()
         {
@@ -47,12 +56,25 @@ namespace WebSiteBanSach.Controllers
             string sTaiKhoan = f["txtTaiKhoan"].ToString();
             string sMatKhau = f.Get("txtMatKhau").ToString();
             KhachHang kh = db.KhachHangs.SingleOrDefault(n => n.TaiKhoan == sTaiKhoan && n.MatKhau == sMatKhau);
-            if (kh != null)
+            KhachHang ad = db.KhachHangs.SingleOrDefault(n => n.TaiKhoan == sTaiKhoan && n.MatKhau == sMatKhau && n.HoTen == "Admin");
+            if (sTaiKhoan != null)
             {
-                ViewBag.ThongBao = "Chúc mừng bạn đăng nhập thành công !";
-                Session["UserName"] = kh.TaiKhoan;
-                Session["TaiKhoan"] = kh;
-                return RedirectToAction("Index", "QuanLySanPham");
+                if (ad != null)
+                {
+                    ViewBag.ThongBao = "Chúc mừng bạn đăng nhập thành công !";
+                    Session["UserName"] = ad.TaiKhoan;
+                    Session["TaiKhoan"] = ad;
+                    return RedirectToAction("Index", "QuanLySanPham");
+                }
+                //if (kh != null)
+                else
+                {
+                    ViewBag.ThongBao = "Chúc mừng bạn đăng nhập thành công !";
+                    Session["UserName"] = kh.TaiKhoan;
+                    Session["TaiKhoan"] = kh;
+                    return RedirectToAction("Index", "Home");
+                }
+
             }
             ViewBag.ThongBao = "Tên tài khoản hoặc mật khẩu không đúng!";
             return View();
