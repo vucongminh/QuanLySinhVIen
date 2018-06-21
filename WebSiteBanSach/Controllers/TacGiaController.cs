@@ -91,7 +91,7 @@ namespace WebSiteBanSach.Controllers
         // POST: TacGia/Edit/5
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult ChinhSua(TacGia tacGia, FormCollection collection)
+        public ActionResult ChinhSua(TacGia tacGia, FormCollection f)
         {
             try
             {
@@ -112,7 +112,7 @@ namespace WebSiteBanSach.Controllers
         }
 
         // GET: TacGia/Delete/5
-        public ActionResult Delete(int maTacGia)
+        public ActionResult Xoa(int maTacGia)
         {
             TacGia tacGia = db.TacGias.SingleOrDefault(n => n.MaTacGia == maTacGia);
             if (tacGia == null)
