@@ -25,16 +25,12 @@ namespace WebSiteBanSach.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<aaaa> aaaas { get; set; }
         public virtual DbSet<ChiTietDonHang> ChiTietDonHangs { get; set; }
         public virtual DbSet<ChuDe> ChuDes { get; set; }
-        public virtual DbSet<ddddd> ddddds { get; set; }
         public virtual DbSet<DonHang> DonHangs { get; set; }
-        public virtual DbSet<dsadsa> dsadsas { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
         public virtual DbSet<NhaXuatBan> NhaXuatBans { get; set; }
         public virtual DbSet<Sach> Saches { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TacGia> TacGias { get; set; }
         public virtual DbSet<ThamGia> ThamGias { get; set; }
     }

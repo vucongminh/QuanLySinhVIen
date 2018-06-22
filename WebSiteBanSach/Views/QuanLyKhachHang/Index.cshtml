@@ -1,0 +1,139 @@
+﻿@model PagedList.PagedList<WebSiteBanSach.Models.KhachHang>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+
+<div class="animated fadeIn">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <strong class="card-title" style="margin-left:20px; font-size:30px; color:aqua;">KHÁCH HÀNG</strong>
+                    <div class="search-bar" style="float:right">
+                        @using (Html.BeginForm("Index", "QuanLyKhachHang", FormMethod.Get))
+                        {
+                            @Html.TextBox("SearchText", null, new { @placeholder = "Nhập Mã KH hoặc Tên KH.. !!!" })
+                            <input type="submit" value="Tìm Kiếm" class="search-button" style=" border-color:red; background-color:yellow ; margin-right:100px " />
+                            <a href="@Url.Action("Index", "QuanLyKhachHang")" class="btn btn-default" style="float:right; border-color:red; background-color:cyan"> <i class="fa fa-dot-circle-o">Thêm Mới </i></a>
+                        }
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.First().MaKH)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.First().HoTen)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.First().NgaySinh)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.First().GioiTinh)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.First().DienThoai)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.First().TaiKhoan)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.First().MatKhau)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.First().Email)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.First().DiaChi)
+                            </th>
+                            <th></th>
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.MaKH)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.HoTen)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NgaySinh)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.GioiTinh)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DienThoai)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TaiKhoan)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.MatKhau,new { style="type"})
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Email)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DiaChi)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Details", "HIenThi", new { /* id=item.PrimaryKey */ }) |
+                                    @Html.ActionLink("Delete", "Xoa", new { /* id=item.PrimaryKey */ })
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@* Tạo link liên kết các trang*@
+                    Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/ @Model.PageCount
+                    <div class="MenuTrang">
+                        @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+                    </div>
+                    <style>
+                        .MenuTrang ul {
+                            list-style-type: none;
+                            margin: 0;
+                            padding: 0;
+                            overflow: hidden; /*background-color: #333;*/
+                        }
+
+                        .MenuTrang li {
+                            display: inline;
+                            float: left;
+                            border-right: 1px solid #bbb;
+                        }
+
+                            .MenuTrang li:last-child {
+                                border-right: none;
+                            }
+
+                            .MenuTrang li a {
+                                display: block;
+                                color: Black;
+                                text-align: center;
+                                padding: 14px 16px;
+                                text-decoration: none;
+                            }
+
+                                .MenuTrang li a:hover:not(.MenuTrang) {
+                                    background-color: #4CAF50;
+                                }
+
+                        .MenuTrang {
+                            background-color: cornflowerblue;
+                        }
+                    </style>
+
+

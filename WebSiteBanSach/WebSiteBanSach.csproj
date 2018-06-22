@@ -173,6 +173,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NguoiDungController.cs" />
     <Compile Include="Controllers\NhaXuatBanController.cs" />
+    <Compile Include="Controllers\QuanLyKhachHangController.cs" />
+    <Compile Include="Controllers\QuanLyNXBController.cs" />
     <Compile Include="Controllers\QuanLySanPhamController.cs" />
     <Compile Include="Controllers\SachController.cs" />
     <Compile Include="Controllers\TacGiaController.cs" />
@@ -180,28 +182,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\aaaa.cs">
-      <DependentUpon>QuanLyBanSachModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\ChiTietDonHang.cs">
       <DependentUpon>QuanLyBanSachModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChuDe.cs">
       <DependentUpon>QuanLyBanSachModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ddddd.cs">
-      <DependentUpon>QuanLyBanSachModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\DonHang.cs">
-      <DependentUpon>QuanLyBanSachModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\dsadsa.cs">
       <DependentUpon>QuanLyBanSachModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GioHang.cs" />
     <Compile Include="Models\KhachHang.cs">
       <DependentUpon>QuanLyBanSachModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Metadata\KhachHang.metadata.cs" />
+    <Compile Include="Models\Metadata\NhaXuatBan.metadata.cs" />
     <Compile Include="Models\Metadata\Sach.metadata.cs" />
     <Compile Include="Models\Metadata\TacGia.metadata.cs" />
     <Compile Include="Models\NhaXuatBan.cs">
@@ -223,9 +218,6 @@
       <DependentUpon>QuanLyBanSachModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Sach.cs">
-      <DependentUpon>QuanLyBanSachModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sysdiagram.cs">
       <DependentUpon>QuanLyBanSachModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TacGia.cs">
@@ -604,6 +596,12 @@
     <Content Include="Views\TacGia\Xoa.cshtml" />
     <Content Include="Views\Layout\NonSlider_Sidebar.cshtml" />
     <Content Include="Views\Layout\LayoutNonSlider.cshtml" />
+    <Content Include="Views\QuanLyNXB\Index.cshtml" />
+    <Content Include="Views\QuanLyNXB\ThemMoi.cshtml" />
+    <Content Include="Views\QuanLyNXB\ChinhSua.cshtml" />
+    <Content Include="Views\QuanLyNXB\HienThi.cshtml" />
+    <Content Include="Views\QuanLyNXB\Xoa.cshtml" />
+    <Content Include="Views\QuanLyKhachHang\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
