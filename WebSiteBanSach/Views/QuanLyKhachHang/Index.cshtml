@@ -75,7 +75,7 @@
                                     @Html.DisplayFor(modelItem => item.TaiKhoan)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.MatKhau,new { style="type"})
+                                    @Html.DisplayFor(modelItem => item.MatKhau)
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Email)
@@ -84,8 +84,8 @@
                                     @Html.DisplayFor(modelItem => item.DiaChi)
                                 </td>
                                 <td>
-                                    @Html.ActionLink("Details", "HIenThi", new { /* id=item.PrimaryKey */ }) |
-                                    @Html.ActionLink("Delete", "Xoa", new { /* id=item.PrimaryKey */ })
+                                    <a href="@Url.Action("HienThi", "TacGia", new { @MaTacGia = item.MaKH })" name='test' class="btn btn-primary btn-sm" style="float:right ; background-color:forestgreen; width:44px">  Chi Tiết </a>
+                                    <a href=" @Url.Action("Xoa", "TacGia", new { @MaTacGia = item.MaKH })" name='test' class="btn btn-primary btn-sm" value='Xoa' style="float:right; background-color:rebeccapurple; width:44px">  Xóa  </a>
                                 </td>
                             </tr>
                         }

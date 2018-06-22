@@ -602,6 +602,8 @@
     <Content Include="Views\QuanLyNXB\HienThi.cshtml" />
     <Content Include="Views\QuanLyNXB\Xoa.cshtml" />
     <Content Include="Views\QuanLyKhachHang\Index.cshtml" />
+    <Content Include="Views\QuanLyKhachHang\HienThi.cshtml" />
+    <Content Include="Views\QuanLyKhachHang\Xoa.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
