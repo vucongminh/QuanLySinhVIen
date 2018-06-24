@@ -1,0 +1,100 @@
+﻿@model WebSiteBanSach.Models.DonHang
+@using WebSiteBanSach.Models
+
+@{
+    ViewBag.Title = "HienThi";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+
+<h2>HienThi</h2>
+
+<div>
+    <strong class="card-title" style="margin-left:20px; font-size:30px; color:aqua;">HIỂN THỊ ĐƠN HÀNG</strong>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt style="font-weight:bold">
+            Mã đơn hàng
+        </dt>
+
+        <dd>
+            <span style="font-size:15pt;margin-left:5px;color:blue">@Model.MaDonHang</span>
+        </dd>
+
+        <dt style="font-weight:bold">
+            Ngày giao hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayGiao)
+        </dd>
+
+        <dt style="font-weight:bold">
+            Ngày đặt hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayDat)
+        </dd>
+
+        <dt style="font-weight:bold">
+            Đã thanh toán
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DaThanhToan)
+        </dd>
+
+        <dt style="font-weight:bold">
+            Tình trạng giao hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TinhTrangGiaoHang)
+        </dd>
+
+        <dt style="font-weight:bold">
+            Tên khách hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KhachHang.HoTen)
+        </dd>
+        <dt style="font-weight:bold">
+            Chi tiết đơn hàng
+        </dt>
+
+    </dl>
+    <table style="margin-left:10%">
+        <tr>
+            <th>
+                Mã sách
+            </th>
+            <th>
+                Tên sách
+            </th>
+            <th>
+                Số lượng
+            </th>
+            <th>
+                Đơn giá
+            </th>
+           
+        </tr>
+        @foreach (var item in (List<ChiTietDonHang>)ViewBag.lsSach)
+        {
+
+            <tr>
+                <td>@item.MaSach</td>
+                <td>@item.Sach.TenSach</td>
+                <td>@item.SoLuong</td>
+                <td>@item.DonGia</td>              
+            </tr>
+
+        }
+    </table>
+</div>
+<p>
+    <a href="@Url.Action("ChinhSua","QuanLyDonHang", new { @MaDonHang=Model.MaDonHang })" class="btn btn-default" style="background-color:greenyellow ">Chỉnh Sửa</a> |
+    <a href="@Url.Action("Index","QuanLyDonHang")" class="btn btn-default" style="background-color:plum ">Trở Về</a>
+
+</p>

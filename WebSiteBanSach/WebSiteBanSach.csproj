@@ -173,6 +173,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NguoiDungController.cs" />
     <Compile Include="Controllers\NhaXuatBanController.cs" />
+    <Compile Include="Controllers\QuanLyDonHangController.cs" />
     <Compile Include="Controllers\QuanLyKhachHangController.cs" />
     <Compile Include="Controllers\QuanLyNXBController.cs" />
     <Compile Include="Controllers\QuanLySanPhamController.cs" />
@@ -195,6 +196,7 @@
     <Compile Include="Models\KhachHang.cs">
       <DependentUpon>QuanLyBanSachModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Metadata\DonHang.metadata.cs" />
     <Compile Include="Models\Metadata\KhachHang.metadata.cs" />
     <Compile Include="Models\Metadata\NhaXuatBan.metadata.cs" />
     <Compile Include="Models\Metadata\Sach.metadata.cs" />
@@ -604,6 +606,10 @@
     <Content Include="Views\QuanLyKhachHang\Index.cshtml" />
     <Content Include="Views\QuanLyKhachHang\HienThi.cshtml" />
     <Content Include="Views\QuanLyKhachHang\Xoa.cshtml" />
+    <Content Include="Views\QuanLyDonHang\Index.cshtml" />
+    <Content Include="Views\QuanLyDonHang\HienThi.cshtml" />
+    <Content Include="Views\QuanLyDonHang\Xoa.cshtml" />
+    <Content Include="Views\QuanLyDonHang\ChinhSua.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
