@@ -28,8 +28,8 @@ namespace WebSiteBanSach.Controllers
 
                 else
                 {
-                    var result = db.DonHangs.Where(s => s.MaKH.ToString().Contains(SearchText));
-                    return View(result.ToList().OrderBy(n => n.MaKH).ToPagedList(pageNumber, pageSize = 100));
+                    var result = db.DonHangs.Where(s => s.KhachHang.HoTen.Contains(SearchText));
+                    return View(result.ToList().OrderBy(n => n.MaDonHang).ToPagedList(pageNumber, pageSize = 100));
                 }
 
             }
