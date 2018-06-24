@@ -32,6 +32,7 @@ namespace WebSiteBanSach.Controllers
             {
                 ViewBag.Sach = "Không có sách nào thuộc chủ đề này";
             }
+            ViewBag.MaNhaXuatBan = MaNXB;
             //Tạo viewbag danh sách nhà xuất bản 
             ViewBag.lstNXB = db.NhaXuatBans.ToList();
             return View(lstSach);

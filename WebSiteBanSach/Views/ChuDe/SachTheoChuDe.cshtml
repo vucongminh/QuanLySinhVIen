@@ -22,9 +22,15 @@
     <div style="float:left;width:30%;">
         @foreach (var item in (List<ChuDe>)ViewBag.lstChuDe)
         {
+            if (item.MaChuDe == ViewBag.MaChuDe)
+            {
+                <a id="btnChuDe" style="width: 250px; font-size: 11pt; color: aliceblue;background-color:#000;  text-decoration: none" href="@Url.Action("SachTheoChuDe", new {@MaChuDe=item.MaChuDe })" class="button button-submit"> @item.TenChuDe</a>
+                <br />
+                continue;
+            }
             <a id="btnChuDe" style="width: 250px; font-size: 11pt; color: aliceblue;  text-decoration: none" href="@Url.Action("SachTheoChuDe", new {@MaChuDe=item.MaChuDe })" class="button button-submit"> @item.TenChuDe</a>
             <br />
-
+            
         }
     </div>
     @{
