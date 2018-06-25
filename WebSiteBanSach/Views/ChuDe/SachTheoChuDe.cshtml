@@ -14,7 +14,20 @@
     }
 </style>*@
 <hr />
-<h2 style="margin-left:2%;font-weight:normal;color:black">Danh mục chủ đề</h2>
+<div>
+    <h2 style="margin-left:2%;font-weight:normal;color:black;display:inline">Danh mục chủ đề</h2>
+    @foreach (var item in (List<ChuDe>)ViewBag.lstChuDe)
+    {
+        if (item.MaChuDe == ViewBag.MaChuDe)
+        {
+            <h2 style="display:inline;margin-left:130px;font-weight:normal;color:black">@item.TenChuDe</h2>
+
+            break;
+        }
+
+    }
+</div>
+
 <hr />
 <div style="clear:both"></div>
 <div id="divBody" style="width:100%">

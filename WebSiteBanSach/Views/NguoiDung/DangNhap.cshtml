@@ -7,7 +7,7 @@
 <h2>
     Đăng nhập
 </h2>
-<h1>@ViewBag.ThongBao</h1>
+
 @using (Html.BeginForm())
 {   <span>Tài khoản :</span> <br />
     @Html.TextBox("txtTaiKhoan");
@@ -15,6 +15,7 @@
     <span>Mật khẩu:</span><br />
     <input name="txtMatKhau" type="text" />
     <br />
+    <p style="color:red;font-size:15pt">@ViewBag.ThongBao</p>
     <input type="submit" id="btnSubmit" name="btnSubmit" value="Đăng Nhập" /> 
     
 }

@@ -56,7 +56,6 @@
                             <text> <button style="background-color:cyan; font-weight:bold">Xin Chào @Session["UserName"]</button> </text>
                             @*@:[ @Html.ActionLink("Đăng Xuất",null, htmlAttributes: new { @class = "DangXuat"  }) ]*@
                             @:@Html.ActionLink("Đăng Xuất", "DangXuat", "NguoiDung",null, new { @class = "button", @style ="background-color:red; font-weight:bold "})
-                                   
 
                         }
                         else
@@ -186,7 +185,11 @@
                 prevText: ''
             });
         });
+      
     </script>
+    
+      
+        
 </body>
 
-</html>
+</html >

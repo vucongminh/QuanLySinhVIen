@@ -48,7 +48,6 @@ namespace WebSiteBanSach.Controllers
         [HttpGet]
         public ActionResult DangNhap()
         {
-
             return View();
         }
         [HttpPost]
@@ -57,18 +56,10 @@ namespace WebSiteBanSach.Controllers
             string sTaiKhoan = f["txtTaiKhoan"].ToString();
             string sMatKhau = f.Get("txtMatKhau").ToString();
             KhachHang kh = db.KhachHangs.SingleOrDefault(n => n.TaiKhoan == sTaiKhoan && n.MatKhau == sMatKhau);
-            KhachHang ad = db.KhachHangs.SingleOrDefault(n => n.TaiKhoan == sTaiKhoan && n.MatKhau == sMatKhau && n.HoTen == "Admin");
-            if (sTaiKhoan != null)
-            {
-                if (ad != null)
-                {
-                    ViewBag.ThongBao = "Chúc mừng bạn đăng nhập thành công !";
-                    Session["UserName"] = ad.TaiKhoan;
-                    Session["TaiKhoan"] = ad;
-                    return RedirectToAction("Index", "QuanLySanPham");
-                }
-                //if (kh != null)
-                else
+            
+            if (sTaiKhoan != "" && sMatKhau!="")
+            {              
+                if (kh != null)
                 {
                     ViewBag.ThongBao = "Chúc mừng bạn đăng nhập thành công !";
                     Session["UserName"] = kh.TaiKhoan;
